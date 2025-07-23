@@ -1,0 +1,211 @@
+/* styles.css */
+/* Fontes modernas e iconografia */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+@import url('https://fonts.googleapis.com/css?family=Inter:400,600&display=swap');
+
+/* Geral */
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    color: #232f3e;
+    background: #f6f8fb;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #1a3a51;
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+h1 {
+    font-size: 2.3em;
+    text-align: center;
+    margin-bottom: 0.6em;
+    border-bottom: 1px solid #e0e8ef;
+    padding-bottom: 0.4em;
+}
+h2 {
+    font-size: 1.35em;
+    margin-top: 1.6em;
+    margin-bottom: 0.6em;
+}
+h3 {
+    font-size: 1.1em;
+    margin-top: 1.2em;
+}
+
+/* Sidebar Streamlit */
+section[data-testid="stSidebar"] {
+    background: #f6f8fb;
+    padding: 20px 22px 10px 22px;
+}
+
+/* Imagens */
+img {
+    border-radius: 13px !important;
+    box-shadow: 0 4px 18px rgba(41,80,112,0.08);
+    background: #fff;
+    border: 1px solid #f1f4f8;
+    padding: 10px;
+    max-width: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+/* Bloco de citação */
+.blockquote {
+    background: #f0f7ff;
+    border-left: 4px solid #7bb7e2;
+    padding: 0.6em 1.1em;
+    margin: 1.2em 0;
+    border-radius: 6px;
+    box-shadow: none;
+    font-size: 1.09em;
+    color: #29425d;
+}
+.blockquote span {
+    color: #4a90e2;
+    font-size: 1.5em;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+.blockquote i {
+    color: #1d232b;
+}
+
+/* Título da história */
+.story-title {
+    font-size: 1.55em;
+    font-weight: 600;
+    color: #25475e;
+    margin-bottom: 0.25em;
+    border-bottom: 1px solid #e9eef2;
+    padding-bottom: 3px;
+    letter-spacing: -0.01em;
+}
+
+/* Frase destaque */
+.frase-destaque {
+    font-size: 1.13em;
+    color: #647185;
+    font-style: italic;
+    margin-bottom: 1.2em;
+    display: block;
+    font-weight: 500;
+}
+
+/* Expander */
+.stExpander {
+    background: #f8fafb;
+    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid #e3e8ee;
+}
+.stExpander > div > div > button {
+    font-weight: 600;
+    color: #1c7ed6;
+}
+
+/* Seção de introdução */
+.intro-section {
+    background: #ffffff;
+    padding: 2.3em 1.6em 2em 1.6em;
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.03);
+    margin-bottom: 2.6em;
+    text-align: center;
+    border: 1px solid #f3f7fa;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.intro-section p {
+    font-size: 1.12em;
+    line-height: 1.63;
+    color: #295c43;
+}
+.intro-section i {
+    font-size: 2.1em;
+    color: #50b573;
+    margin-bottom: 0.5em;
+}
+
+/* Links do rodapé */
+.footer-links a {
+    color: #3378bc;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.footer-links a:hover {
+    color: #145186;
+    text-decoration: underline;
+}
+
+/* Chamada para ação (Catálogo) */
+.cta-catalogo {
+    text-align: center;
+    margin: 2.2em auto 0 auto;
+    padding: 1.1em;
+    background: #f6fcfa;
+    border-radius: 8px;
+    border: 1px solid #d3f2ea;
+    max-width: 440px;
+    box-shadow: 0 1px 4px rgba(0,90,60,0.02);
+}
+.cta-catalogo p {
+    font-size: 1.07em;
+    color: #2d3e40;
+    margin: 0;
+}
+.cta-catalogo a {
+    color: #128e5b;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.18s;
+}
+.cta-catalogo a:hover {
+    color: #115e41;
+    text-decoration: underline;
+}
+
+/* Divider (Streamlit native é ruim) */
+hr, .stDivider {
+    border: none;
+    border-top: 1px solid #e6ecf0;
+    margin: 2em 0 1.3em 0;
+}
+/* Card para imagens com fundo e sombra */
+.img-card {
+    background: #fff;
+    border-radius: 13px;
+    padding: 16px 16px 12px 16px;
+    box-shadow: 0 4px 18px rgba(41,80,112,0.08);
+    margin-bottom: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 210px;
+    border: 1px solid #f1f4f8;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: box-shadow 0.18s;
+}
+
+.img-card img {
+    border-radius: 8px !important;
+    max-width: 98%;
+    max-height: 225px;
+    margin: 0 auto;
+    box-shadow: 0 1px 4px rgba(40,70,110,0.07);
+    display: block;
+}
+
+.img-card .img-caption {
+    font-size: 0.97em;
+    color: #758498;
+    margin-top: 0.7em;
+    text-align: center;
+}
+

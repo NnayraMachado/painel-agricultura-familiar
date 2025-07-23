@@ -1,0 +1,31 @@
+﻿Nome da Família;Latitude;Longitude;Município;Comunidade;Gênero Responsável;Item de Produção Principal;Item de Produção Secundário;Tipo de Certificação;Área Cultivada (ha);Volume Produção Anual (Kg);Método de Venda Principal;Associação/Cooperativa;Telefone;Email;Ano;Volume Produção Anual (Kg)_real_para_trend;Data Última Certificação;Membros Família
+Familia Santos;-10.9091;-37.0677;Aracaju;Santa Maria;Feminino;Hortaliças;Temperos;Convencional;15;4500;Feira;Assoc. Horticultores Ajú;79988881111;santos.aracaju@email.com;2022;4000;15/03/2024;4
+Familia Santos;-10.9091;-37.0677;Aracaju;Santa Maria;Feminino;Hortaliças;Temperos;Convencional;15;4500;Feira;Assoc. Horticultores Ajú;79988881111;santos.aracaju@email.com;2023;4500;20/11/2023;5
+Familia Santos;-10.9091;-37.0677;Aracaju;Santa Maria;Feminino;Hortaliças;Temperos;Convencional;15;4500;Feira;Assoc. Horticultores Ajú;79988881111;santos.aracaju@email.com;2024;4800;10/01/2024;3
+Familia Rocha;-10.8505;-37.1402;Nossa Senhora do Socorro;Taiçoca;Masculino;Milho;Feijão;Convencional;8;12000;Mercado Local;Coop. Agrícola Socorro;79977772222;rocha.socorro@email.com;2022;11000;01/05/2024;4
+Familia Rocha;-10.8505;-37.1402;Nossa Senhora do Socorro;Taiçoca;Masculino;Milho;Feijão;Convencional;8;12000;Mercado Local;Coop. Agrícola Socorro;79977772222;rocha.socorro@email.com;2023;12000;28/02/2024;6
+Familia Rocha;-10.8505;-37.1402;Nossa Senhora do Socorro;Taiçoca;Masculino;Milho;Feijão;Convencional;8;12000;Mercado Local;Coop. Agrícola Socorro;79977772222;rocha.socorro@email.com;2024;12500;05/10/2023;4
+Familia Correia;-10.9069;-37.6698;Lagarto;Colônia Treze;Masculino;Laranja;Mandioca;Orgânica;20;35000;Atacado;Assoc. Citricultores Lagarto;79966663333;correia.lagarto@email.com;2022;32000;20/04/2024;3
+Familia Correia;-10.9069;-37.6698;Lagarto;Colônia Treze;Masculino;Laranja;Mandioca;Orgânica;20;35000;Atacado;Assoc. Citricultores Lagarto;79966663333;correia.lagarto@email.com;2023;35000;01/03/2024;2
+Familia Correia;-10.9069;-37.6698;Lagarto;Colônia Treze;Masculino;Laranja;Mandioca;Orgânica;20;35000;Atacado;Assoc. Citricultores Lagarto;79966663333;correia.lagarto@email.com;2024;36500;12/12/2023;5
+Familia Fernandes;-10.6865;-37.4206;Itabaiana;Agrovila;Feminino;Mandioca;Batata;Convencional;10;18000;Mercado Local;Coop. Mandioca Itabaiana;79955554444;fernandes.itabaiana@email.com;2022;17000;25/01/2024;4
+Familia Fernandes;-10.6865;-37.4206;Itabaiana;Agrovila;Feminino;Mandioca;Batata;Convencional;10;18000;Mercado Local;Coop. Mandioca Itabaiana;79955554444;fernandes.itabaiana@email.com;2023;18000;14/02/2024;3
+Familia Fernandes;-10.6865;-37.4206;Itabaiana;Agrovila;Feminino;Mandioca;Batata;Convencional;10;18000;Mercado Local;Coop. Mandioca Itabaiana;79955554444;fernandes.itabaiana@email.com;2024;19000;05/04/2024;5
+Familia Dantas;-10.9096;-37.2063;São Cristóvão;Rosa Elze;Masculino;Coco;Frutas;Convencional;5;7000;Entrega Direta;Assoc. Coqueiros SC;79944445555;dantas.saocristovao@email.com;2022;6500;01/11/2023;4
+Familia Dantas;-10.9096;-37.2063;São Cristóvão;Rosa Elze;Masculino;Coco;Frutas;Convencional;5;7000;Entrega Direta;Assoc. Coqueiros SC;79944445555;dantas.saocristovao@email.com;2023;7000;22/03/2024;6
+Familia Dantas;-10.9096;-37.2063;São Cristóvão;Rosa Elze;Masculino;Coco;Frutas;Convencional;5;7000;Entrega Direta;Assoc. Coqueiros SC;79944445555;dantas.saocristovao@email.com;2024;7300;30/01/2024;5
+Familia Xavier;-11.2721;-37.4578;Estância;Praia do Saco;Feminino;Pescado;Frutos do Mar;Não se aplica;1;2500;Mercado Local;Colônia Pescadores Estância;79933336666;xavier.estancia@email.com;2022;2300;10/05/2024;4
+Familia Xavier;-11.2721;-37.4578;Estância;Praia do Saco;Feminino;Pescado;Frutos do Mar;Não se aplica;1;2500;Mercado Local;Colônia Pescadores Estância;79933336666;xavier.estancia@email.com;2023;2500;01/02/2024;5
+Familia Xavier;-11.2721;-37.4578;Estância;Praia do Saco;Feminino;Pescado;Frutos do Mar;Não se aplica;1;2500;Mercado Local;Colônia Pescadores Estância;79933336666;xavier.estancia@email.com;2024;2600;15/10/2023;3
+Familia Lima;-11.1824;-37.9947;Tobias Barreto;Centro;Masculino;Cana-de-açúcar;Arroz;Convencional;25;40000;Usina;Sindicato Rural TB;79922227777;lima.tobias@email.com;2022;38000;12/04/2024;4
+Familia Lima;-11.1824;-37.9947;Tobias Barreto;Centro;Masculino;Cana-de-açúcar;Arroz;Convencional;25;40000;Usina;Sindicato Rural TB;79922227777;lima.tobias@email.com;2023;40000;25/11/2023;5
+Familia Lima;-11.1824;-37.9947;Tobias Barreto;Centro;Masculino;Cana-de-açúcar;Arroz;Convencional;25;40000;Usina;Sindicato Rural TB;79922227777;lima.tobias@email.com;2024;41500;08/03/2024;3
+Familia Gomes;-10.2104;-36.8398;Propriá;Centro;Feminino;Arroz;Feijão;Convencional;18;28000;Atacado;Coop. Arrozeiros Propriá;79911118888;gomes.propria@email.com;2022;26000;18/01/2024;2
+Familia Gomes;-10.2104;-36.8398;Propriá;Centro;Feminino;Arroz;Feijão;Convencional;18;28000;Atacado;Coop. Arrozeiros Propriá;79911118888;gomes.propria@email.com;2023;28000;05/02/2024;4
+Familia Gomes;-10.2104;-36.8398;Propriá;Centro;Feminino;Arroz;Feijão;Convencional;18;28000;Atacado;Coop. Arrozeiros Propriá;79911118888;gomes.propria@email.com;2024;29500;25/04/2024;5
+Familia Costa;-10.741;-37.3308;Areia Branca;Jardim;Masculino;Laranja;Limão;Orgânica;12;20000;Mercado Local;Assoc. Fruticultores AB;79900009999;costa.areiabranca@email.com;2022;18000;01/12/2023;6
+Familia Costa;-10.741;-37.3308;Areia Branca;Jardim;Masculino;Laranja;Limão;Orgânica;12;20000;Mercado Local;Assoc. Fruticultores AB;79900009999;costa.areiabranca@email.com;2023;20000;10/03/2024;3
+Familia Costa;-10.741;-37.3308;Areia Branca;Jardim;Masculino;Laranja;Limão;Orgânica;12;20000;Mercado Local;Assoc. Fruticultores AB;79900009999;costa.areiabranca@email.com;2024;21000;01/01/2024;4
+Familia Santana;-10.729;-37.808;Simão Dias;Mutirão;Feminino;Milho;Feijão;Convencional;7;10000;Feira;Assoc. Agricultores SD;79987654321;santana.simaodias@email.com;2022;9500;20/02/2024;3
+Familia Santana;-10.729;-37.808;Simão Dias;Mutirão;Feminino;Milho;Feijão;Convencional;7;10000;Feira;Assoc. Agricultores SD;79987654321;santana.simaodias@email.com;2023;10000;15/11/2023;5
+Familia Santana;-10.729;-37.808;Simão Dias;Mutirão;Feminino;Milho;Feijão;Convencional;7;10000;Feira;Assoc. Agricultores SD;79987654321;santana.simaodias@email.com;2024;10500;01/04/2024;2

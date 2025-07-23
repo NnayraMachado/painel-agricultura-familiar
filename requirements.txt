@@ -1,0 +1,10 @@
+streamlit
+pandas
+pydeck
+plotly
+streamlit-folium
+folium
+Numpy
+streamlit-folium
+gTTS
+streamlit-aggrid

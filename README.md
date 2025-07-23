@@ -1,6 +1,6 @@
 # 🌱 Painel Interativo da Agricultura Familiar Orgânica
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](LINK_DO_SEU_APP_STREAMLIT_AQUI)
+https://painel-agricultura-familiar.streamlit.app
 
 ## 🌟 Visão Geral do Projeto
 
@@ -41,9 +41,7 @@ O Painel da Agricultura Familiar Orgânica é dividido em seções intuitivas qu
 
 O Painel da Agricultura Familiar Orgânica está disponível online, acessível de qualquer dispositivo com conexão à internet.
 
-🔗 **Acesse o aplicativo aqui:** [**LINK_DO_SEU_APP_STREAMLIT_AQUI**](LINK_DO_SEU_APP_STREAMLIT_AQUI)
-
-*(Não se esqueça de substituir `LINK_DO_SEU_APP_STREAMLIT_AQUI` pela URL real do seu aplicativo após o deploy no Streamlit Cloud!)*
+🔗 **Acesse o aplicativo aqui: https://painel-agricultura-familiar.streamlit.app
 
 ## 🛠️ Tecnologias Utilizadas
 

@@ -1,98 +1,104 @@
+# Em src/filtros.py
+
 import streamlit as st
+import pandas as pd
 
-def filtros_menu(df):
-    st.markdown("### 🔎 Filtros para Buscar Famílias e Produção")
+def filtros_menu(df: pd.DataFrame):
+    """
+    Cria e gerencia os filtros na barra lateral usando callbacks para uma limpeza de estado segura.
+    """
+    st.sidebar.header("🔍 Filtros para Buscar")
 
-    # Obtém do session_state ou define padrão
-    busca = st.session_state.get("menu_busca", "")
-    municipio = st.session_state.get("menu_municipio", "Todos")
-    produto = st.session_state.get("menu_produto", "Todos")
-    certificacao = st.session_state.get("menu_certificacao", "Todos")
-    genero = st.session_state.get("menu_genero", "Todos")
-    comunidade = st.session_state.get("menu_comunidade", "Todos")
+    # --- NOVO: Função de Callback ---
+    # Esta função será chamada ANTES da página recarregar quando o botão for clicado.
+    def limpar_filtros_callback():
+        """Reseta todos os valores dos filtros no session_state."""
+        keys_to_clear = [
+            'filtro_busca', 'filtro_municipio', 'filtro_produto',
+            'filtro_certificacao', 'filtro_genero', 'filtro_comunidade'
+        ]
+        for key in keys_to_clear:
+            if key in st.session_state:
+                # Reseta para os valores padrão
+                if key == 'filtro_busca':
+                    st.session_state[key] = ""
+                else:
+                    st.session_state[key] = "Todos"
 
-    # Trava: só deixa um filtro ativo (exceto busca)
-    trava_municipio = municipio != "Todos"
-    trava_produto = produto != "Todos"
-    trava_certificacao = certificacao != "Todos"
-    trava_genero = genero != "Todos"
-    trava_comunidade = comunidade != "Todos"
-    n_filtros = sum([trava_municipio, trava_produto, trava_certificacao, trava_genero, trava_comunidade])
-    
-    bloqueia_geral = n_filtros > 0
+    # --- WIDGETS DE FILTRO ---
+    # Usamos o `st.session_state` para manter o estado dos filtros.
+    # Isso é crucial para que o botão de limpar funcione corretamente.
 
-    col1, col2, col3 = st.columns([2,2,2])
-    col4, col5, col6 = st.columns([2,2,2])
+    busca = st.sidebar.text_input(
+        "Busca (família, produto, município...)",
+        value=st.session_state.get('filtro_busca', ''), # Pega o valor ou um padrão
+        key='filtro_busca' # Chave para o session_state
+    )
 
-    with col1:
-        busca = st.text_input("Busca (família, produto, município...)", value=busca, key="menu_busca", disabled=bloqueia_geral)
-    with col2:
-        municipio = st.selectbox(
-            "Município",
-            ["Todos"] + sorted(df["Município"].fillna("Indefinido").astype(str).unique().tolist()),
-            index=(["Todos"] + sorted(df["Município"].fillna("Indefinido").astype(str).unique().tolist())).index(municipio) if municipio in (["Todos"] + sorted(df["Município"].fillna("Indefinido").astype(str).unique().tolist())) else 0,
-            key="menu_municipio",
-            disabled=not (municipio == "Todos" or not bloqueia_geral)
-        )
-    with col3:
-        produto = st.selectbox(
-            "Produção Principal",
-            ["Todos"] + sorted(df["Item de Produção Principal"].fillna("Indefinido").astype(str).unique().tolist()),
-            index=(["Todos"] + sorted(df["Item de Produção Principal"].fillna("Indefinido").astype(str).unique().tolist())).index(produto) if produto in (["Todos"] + sorted(df["Item de Produção Principal"].fillna("Indefinido").astype(str).unique().tolist())) else 0,
-            key="menu_produto",
-            disabled=not (produto == "Todos" or not bloqueia_geral)
-        )
-    with col4:
-        certificacao = st.selectbox(
-            "Certificação",
-            ["Todos"] + sorted(df["Tipo de Certificação"].fillna("Indefinido").astype(str).unique().tolist()),
-            index=(["Todos"] + sorted(df["Tipo de Certificação"].fillna("Indefinido").astype(str).unique().tolist())).index(certificacao) if certificacao in (["Todos"] + sorted(df["Tipo de Certificação"].fillna("Indefinido").astype(str).unique().tolist())) else 0,
-            key="menu_certificacao",
-            disabled=not (certificacao == "Todos" or not bloqueia_geral)
-        )
-    with col5:
-        genero = st.selectbox(
-            "Gênero Responsável",
-            ["Todos"] + sorted(df["Gênero Responsável"].fillna("Indefinido").astype(str).unique().tolist()),
-            index=(["Todos"] + sorted(df["Gênero Responsável"].fillna("Indefinido").astype(str).unique().tolist())).index(genero) if genero in (["Todos"] + sorted(df["Gênero Responsável"].fillna("Indefinido").astype(str).unique().tolist())) else 0,
-            key="menu_genero",
-            disabled=not (genero == "Todos" or not bloqueia_geral)
-        )
-    with col6:
-        comunidade = st.selectbox(
-            "Comunidade",
-            ["Todos"] + sorted(df["Comunidade"].fillna("Indefinido").astype(str).unique().tolist()),
-            index=(["Todos"] + sorted(df["Comunidade"].fillna("Indefinido").astype(str).unique().tolist())).index(comunidade) if comunidade in (["Todos"] + sorted(df["Comunidade"].fillna("Indefinido").astype(str).unique().tolist())) else 0,
-            key="menu_comunidade",
-            disabled=not (comunidade == "Todos" or not bloqueia_geral)
-        )
+    municipio = st.sidebar.selectbox(
+        "Município",
+        options=["Todos"] + sorted(df["Município"].unique().tolist()),
+        key='filtro_municipio'
+    )
 
-    # Botão limpar
-    limpar = st.button("🧹 Limpar filtros")
-    if limpar:
-        st.session_state.menu_busca = ""
-        st.session_state.menu_municipio = "Todos"
-        st.session_state.menu_produto = "Todos"
-        st.session_state.menu_certificacao = "Todos"
-        st.session_state.menu_genero = "Todos"
-        st.session_state.menu_comunidade = "Todos"
-        st.experimental_rerun()
+    produto = st.sidebar.selectbox(
+        "Produção Principal",
+        options=["Todos"] + sorted(df["Item de Produção Principal"].unique().tolist()),
+        key='filtro_produto'
+    )
+
+    certificacao = st.sidebar.selectbox(
+        "Certificação",
+        options=["Todos"] + sorted(df["Tipo de Certificação"].unique().tolist()),
+        key='filtro_certificacao'
+    )
+
+    genero = st.sidebar.selectbox(
+        "Gênero Responsável",
+        options=["Todos"] + sorted(df["Gênero Responsável"].unique().tolist()),
+        key='filtro_genero'
+    )
+
+    comunidade = st.sidebar.selectbox(
+        "Comunidade",
+        options=["Todos"] + sorted(df["Comunidade"].unique().tolist()),
+        key='filtro_comunidade'
+    )
+
+    # --- ALTERADO: Botão com Callback ---
+    # Removemos o `if` e adicionamos o argumento `on_click`.
+    st.sidebar.button(
+        "🧹 Limpar filtros",
+        on_click=limpar_filtros_callback, # A mágica acontece aqui!
+        use_container_width=True
+    )
 
     return busca, municipio, produto, certificacao, genero, comunidade
 
-def aplicar_filtros(df, busca, municipio, produto, certificacao, genero, comunidade):
+
+def aplicar_filtros(df: pd.DataFrame, busca, municipio, produto, certificacao, genero, comunidade):
+    """Aplica os filtros selecionados ao DataFrame."""
     df_filtrado = df.copy()
+
     if busca:
-        busca = busca.lower()
-        df_filtrado = df_filtrado[df_filtrado.apply(lambda row: busca in " ".join([str(val).lower() for val in row]), axis=1)]
+        # Busca em múltiplas colunas de forma insensível a maiúsculas/minúsculas
+        df_filtrado = df_filtrado[
+            df_filtrado.apply(lambda row: busca.lower() in str(row).lower(), axis=1)
+        ]
+
     if municipio != "Todos":
-        df_filtrado = df_filtrado[df_filtrado["Município"].fillna("Indefinido").astype(str) == municipio]
+        df_filtrado = df_filtrado[df_filtrado["Município"] == municipio]
+
     if produto != "Todos":
-        df_filtrado = df_filtrado[df_filtrado["Item de Produção Principal"].fillna("Indefinido").astype(str) == produto]
+        df_filtrado = df_filtrado[df_filtrado["Item de Produção Principal"] == produto]
+
     if certificacao != "Todos":
-        df_filtrado = df_filtrado[df_filtrado["Tipo de Certificação"].fillna("Indefinido").astype(str) == certificacao]
+        df_filtrado = df_filtrado[df_filtrado["Tipo de Certificação"] == certificacao]
+
     if genero != "Todos":
-        df_filtrado = df_filtrado[df_filtrado["Gênero Responsável"].fillna("Indefinido").astype(str) == genero]
+        df_filtrado = df_filtrado[df_filtrado["Gênero Responsável"] == genero]
+
     if comunidade != "Todos":
-        df_filtrado = df_filtrado[df_filtrado["Comunidade"].fillna("Indefinido").astype(str) == comunidade]
+        df_filtrado = df_filtrado[df_filtrado["Comunidade"] == comunidade]
+
     return df_filtrado

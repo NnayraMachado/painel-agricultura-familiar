@@ -56,52 +56,6 @@ O Painel da Agricultura Familiar Orgânica está disponível online, acessível 
 * **gTTS:** Geração de áudio para recursos de acessibilidade (leitura de texto).
 * **JSON:** Armazenamento estruturado de dados das histórias.
 
-## 📊 Estrutura do Projeto
-
-painel-agricultura-familiar/
-├── .streamlit/
-│   └── # Configurações opcionais do Streamlit (ex: tema)
-├── app.py
-│   └── # Página inicial e ponto de entrada principal do aplicativo.
-├── historias.json
-│   └── # Dados estruturados das histórias dos personagens.
-├── data/
-│   └── familias_agricultoras.csv
-│       └── # Conjunto de dados principal sobre as famílias agricultoras.
-├── imagens/
-│   ├── joao.jpg
-│   ├── itabaiana.png
-│   ├── margarida.jpg
-│   ├── lagarto.png
-│   ├── pedro.jpg
-│   ├── estancia.png
-│   ├── ana.jpg
-│   ├── poco_verde.png
-│   └── logo.jpg
-│       └── # Arquivos de imagem utilizados nas diversas páginas do painel.
-├── pages/
-│   ├── 01_Painel_Agricultor.py
-│   │   └── # Página de visão geral do painel do agricultor e dados da comunidade.
-│   ├── 02_Tendencias.py
-│   │   └── # Página de análise de tendências e rankings de produção.
-│   ├── 03_Produtos_Onde_Comprar.py
-│   │   └── # Página com lista de produtos e contatos para compra.
-│   ├── 04_Mapa_Interativo.py
-│   │   └── # Página com mapa interativo das famílias agricultoras.
-│   └── 05_Historias_StoryMap.py
-│       └── # Página de exibição das histórias poéticas dos agricultores.
-├── src/
-│   ├── __init__.py
-│   │   └── # Indica que 'src' é um pacote Python.
-│   ├── loader.py
-│   │   └── # Módulo para carregar e pré-processar os dados.
-│   ├── filtros.py
-│   │   └── # Módulo contendo funções para aplicar filtros aos dados.
-│   └── mapas_folium.py
-│       └── # Módulo com a lógica para renderizar mapas Folium.
-└── requirements.txt
-    └── # Lista de todas as bibliotecas Python necessárias para o projeto.
-
 ## 🤝 Contribuição e Contato
 
 Este projeto é um esforço contínuo e busca ser uma ferramenta cada vez mais útil para a comunidade.

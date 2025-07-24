@@ -62,12 +62,12 @@ if historias:
             # Layout das imagens (usar st.image para servir imagens locais)
             col1, col2 = st.columns([1.25, 2])
             with col1:
-                st.image(os.path.join(root_dir, historia['mapa_img']), use_column_width=True)
+                st.image(os.path.join(root_dir, historia['mapa_img']), use_container_width=True)
                 with st.expander(historia['municipio_texto']):
                     st.write(historia['mapa_texto_detalhado'])
 
             with col2:
-                st.image(os.path.join(root_dir, historia['personagem_img']), use_column_width=True)
+                st.image(os.path.join(root_dir, historia['personagem_img']), use_container_width=True)
                 st.markdown("<div class='img-caption'>Retrato ilustrativo</div>", unsafe_allow_html=True)
             st.write("")
 
